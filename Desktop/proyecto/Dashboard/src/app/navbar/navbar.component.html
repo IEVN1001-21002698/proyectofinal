@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="bg-gray-800 text-white w-64">
+      <div class="p-4 border-b border-gray-700">
+        <h2 class="text-lg font-semibold flex items-center"><i class="fas fa-bars mr-2"></i>Navegación</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a routerLink="http://localhost:4200" class="flex items-center block p-4 hover:bg-gray-700"><i class="fas fa-home mr-3"></i>Inicio</a></li>
+          <li><a routerLink="" class="flex items-center block p-4 hover:bg-gray-700"><i class="fas fa-cogs mr-3"></i>Procesos</a></li>
+          <li><a routerLink="/admin/abc" class="flex items-center block p-4 hover:bg-gray-700"><i class="fas fa-asterisk mr-3"></i>Aminoración de ABC</a></li>
+          <li><a routerLink="" class="flex items-center block p-4 hover:bg-gray-700"><i class="fas fa-chart-line mr-3"></i>Dashboard</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+      <header class="p-6 border-b border-gray-300">
+        <h1 class="text-2xl font-bold text-gray-800 flex items-center">
+          <i class="fas fa-home mr-2"></i> Tablero de mandos
+        </h1>
+      </header>
+
+      <!-- Contenido dinámico -->
+      <section class="bg-white p-6 m-6 rounded shadow">
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
